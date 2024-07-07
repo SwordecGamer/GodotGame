@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgmq1jhx3mbjs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_anfbs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2pp3"]
+bg_color = Color(0, 0.678431, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kflhu"]
+font_size = 30
+font_color = Color(1, 1, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytkmx"]
+bg_color = Color(0, 0.615686, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2vceo"]
+font_size = 30
+font_color = Color(1, 1, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="UserInterface" type="Node2D"]
+
+[node name="HealthBar" type="MarginContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 900.0
+offset_right = 550.0
+offset_bottom = 950.0
+grow_vertical = 0
+
+[node name="Value" type="ProgressBar" parent="HealthBar"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_anfbs")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x2pp3")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="HealthBar"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+text = "HP"
+label_settings = SubResource("LabelSettings_kflhu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaminaBar" type="MarginContainer" parent="."]
+offset_left = 50.0
+offset_top = 950.0
+offset_right = 550.0
+offset_bottom = 1000.0
+
+[node name="Value" type="ProgressBar" parent="StaminaBar"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_ytkmx")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="StaminaBar"]
+layout_mode = 2
+text = "STAMINA"
+label_settings = SubResource("LabelSettings_2vceo")
+horizontal_alignment = 1
+vertical_alignment = 1
