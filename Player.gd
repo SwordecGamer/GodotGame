@@ -3,7 +3,7 @@ extends CharacterBody3D
 var mouse_sensitivity := 0.001
 var twist_input := 0.0
 var pitch_input := 0.0
-var jump_strength := 10.0
+var jump_strength := 5.0
 var gravity := -9.8
 var walk_speed := 5.0
 var sprint_speed := 10.0
@@ -33,8 +33,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Unlocking the Mouse, nya
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("pause_game"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().change_scene_to_file("res://pause_menu.tscn")
 
 	# Basic Camera Orientation
 	twist_pivot.rotate_y(twist_input)

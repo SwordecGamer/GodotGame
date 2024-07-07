@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cebhdvyldcpbx"]
+
+[ext_resource type="Script" path="res://settings_menu.gd" id="1_kldcp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mcput"]
+font_size = 30
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kldcp")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 1920.0
+offset_bottom = 100.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_mcput")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitSettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 100.0
+text = "Back"

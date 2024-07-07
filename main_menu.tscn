@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://mhr1cdffexhs"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_0ifg6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmpib"]
+line_spacing = 2.0
+font_size = 50
+font_color = Color(0, 1, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ifg6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 600.0
+text = "[Put Game Name Here]"
+label_settings = SubResource("LabelSettings_wmpib")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartGameButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 600.0
+offset_right = 1060.0
+offset_bottom = 650.0
+text = "Start Game"
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 700.0
+offset_right = 1060.0
+offset_bottom = 750.0
+text = "Settings"
+
+[node name="ExitGameButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 800.0
+offset_right = 1060.0
+offset_bottom = 850.0
+text = "Exit Game"
